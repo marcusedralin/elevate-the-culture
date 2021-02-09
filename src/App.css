@@ -36,3 +36,21 @@
     transform: rotate(360deg);
   }
 }
+
+/* Custom CSS */
+
+/* Header */
+
+.banner {
+  background-color: #00a59e;
+  min-height: 50vh;
+}
+
+.brandName {
+  padding-top: 10px;
+  padding-left: 10px;
+}
+
+.logo {
+  border-radius: 50%;
+}

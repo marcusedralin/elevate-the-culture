@@ -5,44 +5,33 @@ import { NavLink } from 'react-router-dom';
 export default function Header() {
     return (
         <>
-            <Jumbotron>
-                <div className="container">
-                    <div className="row">
-                        <div className="col">
-                            <h1>Elevate<br />the<br/>Culture</h1>
+            <div className="banner">
+                <Jumbotron>
+                    <div className="container">
+                        <div className="row">
+                            <div className="col brandName">
+                                <h1>Elevate<br />the<br/>Culture</h1>
+                            </div>
                         </div>
+                    <div className="container">
+                            <div className="row">
+                                <div className="col">
+                                    <nav>
+                                    <a href="/"><img className="logo" src="/assets/images/etcGradientTopDown.jpeg" alt="ETC Logo" width="30" height="30"></img></a>
+                                        <navbar sticky="top">
+                                                <a href="/">Home </a>
+                                                <a href="#about">About </a>
+                                                <a href="#newsletter">Newsletter </a>
+                                                <a href="#media">Media </a>
+                                                <a href="#merchandise">Merchandise </a>
+                                        </navbar>
+                                    </nav>
+                                </div>
+                            </div>
                     </div>
-                </div>
-            </Jumbotron>
-            <Navbar dark sticky="top" expand="md">
-                <div className="container">
-                    <NavbarBrand className="mr-auto" href="/">
-                    <img src="/assets/images/etcGradientTopDown.jpeg" alt="Etc Logo" width="30" height="30"></img>
-                    </NavbarBrand>
-                    <Collapse navbar>
-                        <Nav navbar>
-                            <List className="unstyled">
-                                <NavItem>
-                                    <a href="/">Home</a>
-                                </NavItem>
-                                <NavItem>
-                                    <a href="#about">About</a>
-                                </NavItem>
-                                <NavItem>
-                                <a href="#story">Daily Elevation</a>
-                                </NavItem>
-                                <NavItem>
-                                <a href="#media">Media</a>
-                                </NavItem>
-                                <NavItem>
-                                <a href="#store">Store</a>
-                                </NavItem>
-                            </List>
-                        </Nav>
-                    </Collapse>
-                </div>
-            </Navbar>
-
+                    </div>
+                </Jumbotron>
+            </div>
         </>
     )
 }
