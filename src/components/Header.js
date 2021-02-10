@@ -6,17 +6,17 @@ export default function Header() {
     return (
         <>
             <div className="banner">
-                <Jumbotron>
                     <div className="container">
                         <div className="row">
-                            <div className="col brandName">
+                            <div className="col">
                                 <h1>Elevate<br />the<br/>Culture</h1>
                             </div>
                         </div>
+                    </div>
                     <div className="container">
                             <div className="row">
                                 <div className="col">
-                                    <nav>
+                                    <nav className="navbar">
                                     <a href="/"><img className="logo" src="/assets/images/etcGradientTopDown.jpeg" alt="ETC Logo" width="30" height="30"></img></a>
                                         <navbar sticky="top">
                                                 <a href="/">Home </a>
@@ -29,9 +29,7 @@ export default function Header() {
                                 </div>
                             </div>
                     </div>
-                    </div>
-                </Jumbotron>
-            </div>
+                </div>
         </>
     )
 }
