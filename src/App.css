@@ -1,51 +1,72 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
 /* Custom CSS */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+h1,
+h2,
+h3,
+.card-body > .card-title {
+  font-family: "Montserrat", cursive;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+/* BRAND COLOR: #00A59E FONT: MONTSERRAT */
+
+/* Links */
+
+a:link,
+a:visited {
+  color: #00a59e;
+  text-decoration: none;
+  padding-bottom: 1px;
+}
 
 /* Header */
 
-.banner {
-  background-color: #00a59e;
-  min-height: 50vh;
+header {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.34)), to(rgba(0, 0, 0, 0.34))), url(IMG/hero-min.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.34), rgba(0, 0, 0, 0.34)), url("./shared/pretendBannerImg.jpg");
+  height: 50vh;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
 }
 
 .logo {
   border-radius: 50%;
+}
+
+.main-nav {
+  float: right;
+  list-style: none;
+  margin-top: 55px;
+}
+
+.main-nav li {
+  display: inline-block;
+  margin: 0 0 0 40px;
+}
+
+/* Mission---Store */
+
+.row-content {
+  padding: 50px 0;
+  border-bottom: 1px ridge;
+  min-height: 200px;
+}
+
+/* Footer */
+
+.site-footer {
+  background-image: linear-gradient(#cec8ff, white);
+  padding: 20px 0;
 }
