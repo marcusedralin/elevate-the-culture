@@ -1,9 +1,9 @@
 import React from 'react'
 
-export default function Video() {
+export default function Newsletter() {
     return (
         <div>
-            <h2>Advertisement Video</h2>
+            <h2>Newsletter</h2>
         </div>
     )
 }

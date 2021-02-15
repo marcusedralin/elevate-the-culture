@@ -1,28 +1,33 @@
 import React, { Component } from 'react';
 import Header from "./Header";
-import Mission from "./Mission";
-import Story from "./Story";
-import Video from "./Video";
+import Home from "./Home"
+import Contact from "./Contact";
+import Media from "./Media";
 import Store from "./Store";
 import Footer from "./Footer";
-import { HEADERBG } from "../shared/headerBg"
 import { Switch, Route, Redirect } from 'react-router-dom';
 
 export default class Main extends Component {
-    constructor(props){
-        super(props);
-        this.state = {
-            headerBg : HEADERBG
-        };
-    }
     render() {
+
+        const HomePage = () => {
+            return (
+                <Home />
+            )
+        }
+
         return (
             <div>
                 <Header />
-                <Mission />
-                <Story />
-                <Video />
-                <Store />
+                <Switch>
+                    <Route path='/home' component={HomePage} />
+                    <Route exact path='/contactus' render={ () => <Contact />}/>
+                    <Route exact path='/media' render={ () => <Media />}/>
+                    <Route exact path='/store' render={ () => <Store />}/>
+                    <Redirect to ='/home' />
+                </Switch>
+                
+                
                 <Footer />
             </div>
         )

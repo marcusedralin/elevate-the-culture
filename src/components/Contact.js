@@ -1,9 +1,9 @@
 import React from 'react'
 
-export default function Story() {
+export default function Contact() {
     return (
         <div>
-            <h2>Story</h2>
+            <h1>Contact Us</h1>
         </div>
     )
 }

@@ -1,9 +1,10 @@
 import React from 'react'
 
-export default function Video() {
+
+export default function Home() {
     return (
         <div>
-            <h2>Advertisement Video</h2>
+            <h1>Home page</h1>
         </div>
     )
 }
