@@ -4,18 +4,24 @@ import { Nav, Navbar, Col, Row, Container, NavbarBrand, NavbarToggler, Collapse,
 
 export default class Header extends Component {
 
-    state = {
+    constructor(props) {
+        super(props);
+    
+
+    this.state = {
         isNavOpen: false,
         isModalOpen: false
     };
+    this.toggleNav = this.toggleNav.bind(this);
+}
 
-    toggleNav = () => {
+    toggleNav() {
         this.setState({
             isNavOpen: !this.state.isNavOpen
         });
     }
 
-    toggleModal = () => {
+    toggleModal() {
         this.setState({
             isModalOpen: !this.state.isModalOpen
         });
@@ -24,7 +30,7 @@ export default class Header extends Component {
     render() {
         return (
             <>
-                <header className="banner">
+                <div className="banner">
                     <Container>
                         <Row>
                             <Col md={6}>
@@ -33,42 +39,42 @@ export default class Header extends Component {
                         </Row>
                     </Container>
                     <Container>
-                        <Row>     
-                            <Navbar className="main-nav" sticky="top" expand="sm">
-                                <Container>
+                        <Row> 
+                            <Col lg={6}>   
+                            <Navbar className="main-nav" dark sticky="top" expand="sm">
                                     <NavbarBrand className="mr-auto" href="/">
-                                        <img className="logo" src="/assets/images/etcGradientTopDown.jpeg" alt="ETC Logo" width="30" height="30"></img>
+                                        <img className="logo" src="/assets/images/etcGradientTopDown.jpeg" alt="ETC Logo" width="30" height="30" />
                                     </NavbarBrand>
                                     <NavbarToggler onClick={this.toggleNav} />
                                     <Collapse isOpen={this.state.isNavOpen} navbar>
                                         <Nav navbar>
                                             <NavItem>
                                                 <NavLink className="nav-link" to="/home" href="/" active>
-                                                <i className="fa fa-home fa-lg" /> Home
+                                                <i className="fa fa-home fa-md" /> Home
                                                 </NavLink>
                                             </NavItem>
                                             <NavItem>
                                                 <NavLink className="nav-link" to="/media" href="/">
-                                                <i className="fa fa-film  fa-lg" /> Media
+                                                <i className="fa fa-film  fa-md" /> Media
                                                 </NavLink>
                                             </NavItem>
                                             <NavItem>
                                                 <NavLink className="nav-link" to="/store" href="/">
-                                                <i className="fa fa-shopping-bag fa-lg" /> Store
+                                                <i className="fa fa-shopping-bag fa-md" /> Store
                                                 </NavLink>
                                             </NavItem>
                                             <NavItem>
                                                 <NavLink className="nav-link" to="/contactus" href="/">
-                                                <i className="fa fa-shopping-bag fa-lg" /> Contact Us
+                                                <i className="fa  fa-address-card-o fa-md" /> Contact Us
                                                 </NavLink>
                                             </NavItem>
                                         </Nav>
                                     </Collapse>
-                                </Container>
                             </Navbar>
+                            </Col> 
                         </Row>
                     </Container>
-                </header>
+                </div>
             </>
         );
     }

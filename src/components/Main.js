@@ -21,13 +21,11 @@ export default class Main extends Component {
                 <Header />
                 <Switch>
                     <Route path='/home' component={HomePage} />
-                    <Route exact path='/contactus' render={ () => <Contact />}/>
+                    <Route exact path='/contactus' render={ () => <Contact  />}/>
                     <Route exact path='/media' render={ () => <Media />}/>
                     <Route exact path='/store' render={ () => <Store />}/>
                     <Redirect to ='/home' />
                 </Switch>
-                
-                
                 <Footer />
             </div>
         )
