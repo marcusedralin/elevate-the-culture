@@ -21,9 +21,9 @@ export default class Main extends Component {
                 <Header />
                 <Switch>
                     <Route path='/home' component={HomePage} />
-                    <Route exact path='/contactus' render={ () => <Contact  />}/>
-                    <Route exact path='/media' render={ () => <Media />}/>
-                    <Route exact path='/store' render={ () => <Store />}/>
+                    <Route exact path='/contactus' render={ () => <Contact component={Contact}  />}/>
+                    <Route exact path='/media' render={ () => <Media component={Media} />}/>
+                    <Route exact path='/store' render={ () => <Store component={Store} />}/>
                     <Redirect to ='/home' />
                 </Switch>
                 <Footer />
