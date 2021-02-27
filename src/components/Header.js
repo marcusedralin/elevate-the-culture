@@ -2,6 +2,7 @@ import React, { Component }  from 'react';
 import { NavLink } from 'react-router-dom';
 import { Nav, Navbar, Col, Row, Container, NavbarBrand, NavbarToggler, Collapse, NavItem } from 'reactstrap';
 
+
 export default class Header extends Component {
 
     constructor(props) {
@@ -17,7 +18,7 @@ export default class Header extends Component {
 
     toggleNav() {
         this.setState({
-            isNavOpen: !this.state.isNavOpen
+            isNavOpen: !this.state.isNavOpen 
         });
     }
 
@@ -40,35 +41,36 @@ export default class Header extends Component {
                     </Container>
                     <Container>
                         <Row> 
-                            <Col lg={6}>   
+                            <Col lg={6}>
                             <Navbar className="main-nav" dark sticky="top" expand="sm">
                                     <NavbarBrand className="mr-auto" href="/">
                                         <img className="logo" src="/assets/images/etcGradientTopDown.jpeg" alt="ETC Logo" width="30" height="30" />
                                     </NavbarBrand>
                                     <NavbarToggler onClick={this.toggleNav} />
                                     <Collapse isOpen={this.state.isNavOpen} navbar>
-                                        <Nav navbar>
-                                            <NavItem>
-                                                <NavLink className="nav-link" to="/home" href="/" active>
-                                                <i className="fa fa-home fa-md" /> Home
-                                                </NavLink>
-                                            </NavItem>
-                                            <NavItem>
-                                                <NavLink className="nav-link" to="/media" href="/">
-                                                <i className="fa fa-film  fa-md" /> Media
-                                                </NavLink>
-                                            </NavItem>
-                                            <NavItem>
-                                                <NavLink className="nav-link" to="/store" href="/">
-                                                <i className="fa fa-shopping-bag fa-md" /> Store
-                                                </NavLink>
-                                            </NavItem>
-                                            <NavItem>
-                                                <NavLink className="nav-link" to="/contactus" href="/">
-                                                <i className="fa  fa-address-card-o fa-md" /> Contact Us
-                                                </NavLink>
-                                            </NavItem>
-                                        </Nav>
+                                            <Nav navbar>
+                                                <NavItem>
+                                                    <NavLink className="nav-link" to="/home" href="/" active>
+                                                    <i className="fa fa-home fa-md" /> Home
+                                                    </NavLink>
+                                                </NavItem>
+                                            
+                                                <NavItem>
+                                                    <NavLink className="nav-link" to="/media" href="/">
+                                                    <i className="fa fa-film  fa-md" /> Media
+                                                    </NavLink>
+                                                </NavItem>
+                                                <NavItem>
+                                                    <NavLink className="nav-link" to="/store" href="/">
+                                                    <i className="fa fa-shopping-bag fa-md" /> Store
+                                                    </NavLink>
+                                                </NavItem>
+                                                <NavItem>
+                                                    <NavLink className="nav-link" to="/contactus" href="/">
+                                                    <i className="fa  fa-address-card-o fa-md" /> Contact Us
+                                                    </NavLink>
+                                                </NavItem>
+                                            </Nav>
                                     </Collapse>
                             </Navbar>
                             </Col> 
