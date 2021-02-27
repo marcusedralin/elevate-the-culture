@@ -1,5 +1,5 @@
 import React from 'react'
-import { Stagger, FadeTransform, TransitionGroup } from 'react-animation-components';
+import { Stagger, FadeTransform } from 'react-animation-components';
 import { Container, Col, Row } from 'reactstrap';
 
 

@@ -61,7 +61,7 @@ export default class Header extends Component {
                                                     </NavLink>
                                                 </NavItem>
                                                 <NavItem>
-                                                    <NavLink className="nav-link" to="/store" href="/">
+                                                    <NavLink className="nav-link" to="/shop" href="/">
                                                     <i className="fa fa-shopping-bag fa-md" /> Store
                                                     </NavLink>
                                                 </NavItem>
