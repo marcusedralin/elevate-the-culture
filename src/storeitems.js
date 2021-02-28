@@ -1,4 +1,4 @@
-export const STORE = [
+export const STOREITEMS = [
     {
         id: 0,
         name: 'ETC Shirt',

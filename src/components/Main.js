@@ -5,7 +5,7 @@ import Contact from "./Contact";
 import Media from "./Media";
 import Footer from "./Footer";
 import Shop from "./Shop";
-import { STORE } from "../store";
+import { STOREITEMS } from "../storeitems";
 import { Switch, Route, Redirect } from 'react-router-dom';
 
 export default class Main extends Component {
@@ -13,7 +13,7 @@ export default class Main extends Component {
         super(props)
 
         this.state = {
-            store: STORE
+            storeitems: STOREITEMS
         };
         
 /* I want to have my main component manage all my state for my home component so I can pass it down. */
@@ -35,7 +35,7 @@ export default class Main extends Component {
                             <Route path='/home' component={HomePage} />
                             <Route exact path='/contactus' render={ () => <Contact component={Contact}  />}/>
                             <Route exact path='/media' render={ () => <Media component={Media} />}/>
-                            <Route exact path='/shop' render={ () => <Shop component={Shop} store={this.state.store} />}/>
+                            <Route exact path='/shop' render={ () => <Shop component={Shop} storeitems={this.state.storeitems} />}/>
                             <Redirect to ='/home' />
                         </Switch>
                 <Footer />
