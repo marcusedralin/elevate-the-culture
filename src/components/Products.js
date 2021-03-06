@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, CardBody, CardImg, CardTitle, CardText, CardImgOverlay, Button, Container, Col, Row, Input, FormGroup, Label } from 'reactstrap';
+import { Card, CardBody, CardImg, CardTitle, CardText, Button, Container, Col, Row, Input, FormGroup, Label } from 'reactstrap';
 
 const Products = (props) => {
     return (
