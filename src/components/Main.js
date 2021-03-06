@@ -4,8 +4,8 @@ import Home from "./Home"
 import Contact from "./Contact";
 import Media from "./Media";
 import Footer from "./Footer";
-import Shop from "./Shop";
-import { STOREITEMS } from "../storeitems";
+import Products from "./Products";
+import { PRODUCTS } from "../products";
 import { Switch, Route, Redirect } from 'react-router-dom';
 
 export default class Main extends Component {
@@ -13,11 +13,16 @@ export default class Main extends Component {
         super(props)
 
         this.state = {
-            storeitems: STOREITEMS
+            products: PRODUCTS,
+            selectedItem: null,
         };
-        
-/* I want to have my main component manage all my state for my home component so I can pass it down. */
     }
+
+    // This is my function to decide what store item the user clicks on.
+    onItemSelect(itemId) {
+        this.setState({selectedItem: itemId});
+    }
+
     render() {
 
         const HomePage = () => {
@@ -35,7 +40,7 @@ export default class Main extends Component {
                             <Route path='/home' component={HomePage} />
                             <Route exact path='/contactus' render={ () => <Contact component={Contact}  />}/>
                             <Route exact path='/media' render={ () => <Media component={Media} />}/>
-                            <Route exact path='/shop' render={ () => <Shop component={Shop} storeitems={this.state.storeitems} />}/>
+                            <Route exact path='/products' render={ () => <Products component={Products} products={this.state.products} />}/>
                             <Redirect to ='/home' />
                         </Switch>
                 <Footer />
