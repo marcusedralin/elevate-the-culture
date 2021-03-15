@@ -1,11 +1,5 @@
 /* Custom CSS */
 
-/* * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-} */
-
 body {
   font-family: "Montserrat", cursive;
 }
@@ -15,11 +9,20 @@ h2,
 h3,
 .card-body > .card-title {
   font-family: "Montserrat", cursive;
-  font-weight: 300;
+  font-weight: 400;
   text-transform: uppercase;
 }
 
 /* BRAND COLOR: #00A59E FONT: MONTSERRAT */
+
+/* Reuseable CSS */
+
+.myContainer {
+  min-height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
 /* Links */
 
@@ -32,21 +35,31 @@ a:visited {
 
 /* Header */
 
+.mainNav {
+  background-color: #4c3144;
+  text-align: center;
+  color: white;
+}
+
+.saleHeader {
+  background-color: #272727;
+  padding: 10px;
+}
+
 .banner {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.34)), to(rgba(0, 0, 0, 0.34))), url(IMG/hero-min.jpg);
-  background-image: linear-gradient(rgba(0, 0, 0, 0.34), rgba(0, 0, 0, 0.34)), url("./shared/pretendBannerImg.jpg");
+  background-image: url("./shared/pretendBannerImg.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  min-height: 50vh;
+}
+
+.bannerTextBg {
+  background-color: rgba(196, 196, 196, 0.5);
 }
 
 .logo {
   border-radius: 50%;
-}
-
-.main-nav {
-  margin-top: 70px;
-  margin-bottom: 20px;
 }
 
 /* Mission---Store */
@@ -57,7 +70,7 @@ blockquote {
   margin: 0.5em;
   padding: 0.5em 2em 0.5em 3em;
 }
-/* Thanks: http://callmenick.com/post/styling-blockquotes-with-css-pseudo-classes */
+
 blockquote:before {
   font-family: Georgia, serif;
   position: absolute;
@@ -70,7 +83,6 @@ blockquote:before {
 blockquote:after {
   font-family: Georgia, serif;
   position: absolute;
-  /* display: block; don't use this, it raised the quote too high from the bottom - defeated line-height? */
   float: right;
   font-size: 6em;
   line-height: 1;
