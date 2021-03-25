@@ -24,6 +24,13 @@ h3,
   justify-content: center;
 }
 
+.brandAcronym {
+  color: #00A59E;
+  font-weight: 400;
+  font-style: italic;
+  padding-bottom: 0;
+}
+
 /* Links */
 
 a:link,
@@ -110,6 +117,7 @@ blockquote:after {
 /* Footer */
 
 .site-footer {
-  background-image: linear-gradient(#00a59e, black);
+  background-color: #4c3144 ;
   padding: 20px 0;
+  justify-content: center;
 }
